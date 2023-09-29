@@ -10,7 +10,7 @@ function DestroyGui()
 end
 
 function Menu()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Matrix11th/MatrixScript/main/MatrixScript"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/dbp5kGTd"))()
 end
 
 
