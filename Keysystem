@@ -1,0 +1,60 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+-- Functions
+_G.Key = "Uio112fbdw"
+_G.KeyInput = "string"
+
+function DestroyGui()
+    OrionLib:Destroy()
+end
+
+function Menu()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Matrix11th/MatrixScript/main/MatrixScript"))()
+end
+
+
+-- Creating Window
+local Window = OrionLib:MakeWindow({Name = "مفتاح ", HidePremium = false, IntroEnabled = false})
+
+
+-- Creating Tabs
+local tab1 = Window:MakeTab({
+	Name = "المفتاح",
+	Icon = "",
+	PremiumOnly = false
+})
+
+-- Config Tab1
+local Section1 = tab1:AddSection({
+	Name = "MATRIX THE KING"
+})
+
+tab1:AddTextbox({
+	Name = "ادخل مفتاح",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+         _G.KeyInput = Value
+	end	  
+})
+
+tab1:AddButton({
+	Name = "تشغيل",
+	Callback = function()
+        if _G.KeyInput == _G.Key then
+            OrionLib:MakeNotification({
+	        Name = "✅️السكربت تشغيل سيتم صحيح المفتاح",
+	        Content = "✅️السكربت تشغيل سيتم صحيح المفتاح",
+	        Image = "",
+	        Time = 1.5
+            })
+        wait(1.5)
+        Menu()
+    end
+	end    
+})
+
+
+-- Script End
+OrionLib:Init()
